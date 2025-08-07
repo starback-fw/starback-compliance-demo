@@ -1,0 +1,19 @@
+From 1234567890abcdef1234567890abcdef12345678 Mon Sep 17 00:00:00 2001
+From: StarBack Compliance Team <starback.fw@gmail.com>
+Date: Thu, 8 Aug 2025 12:00:00 +0800
+Subject: [PATCH] demo: Add printk to kernel boot log
+
+This is a demonstration patch for GPL compliance release.
+---
+ init/main.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/init/main.c b/init/main.c
+index abcdef0..1234567 100644
+--- a/init/main.c
++++ b/init/main.c
+@@ void start_kernel(void)
+ {
++	printk(KERN_INFO "StarBack Kernel Patch Demo Loaded.\n");
++
+ 	setup_arch(&command_line);
